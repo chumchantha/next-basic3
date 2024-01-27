@@ -17,7 +17,7 @@ const Hero = async () => {
           Play
         </button>
       </div>
-      <video autoPlay loop className="w-full object-cover h-[40vw]">
+      <video loop autoPlay muted className="w-full object-cover h-[40vw]">
         <source
           // src={`http://127.0.0.1:8090/api/files/6erqbp5koy8vlx9/${movie.id}/${movie.video_url}`}
           src={`https://soydrama.pockethost.io/api/files/6erqbp5koy8vlx9/${movie.id}/${movie.video_url}`}
