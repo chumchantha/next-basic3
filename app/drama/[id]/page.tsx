@@ -3,10 +3,10 @@ import Link from "next/link";
 const gotDrama = async (dramaId: any) => {
   const res = await fetch(
     // `http://127.0.0.1:8090/api/collections/movies/records/${dramaId}`
-    `https://soydrama.pockethost.io/api/collections/movies/records/${dramaId}`,
-    {
-      cache: "no-store",
-    }
+    `https://soydrama.pockethost.io/api/collections/movies/records/${dramaId}`
+    //, {
+    //   cache: "no-store",
+    // }
   );
   const data = await res.json();
 
