@@ -2,8 +2,9 @@ import Link from "next/link";
 
 const gotDrama = async (dramaId: any) => {
   const res = await fetch(
-    // `http://127.0.0.1:8090/api/collections/movies/records/${dramaId}`
-    `https://soydrama.pockethost.io/api/collections/movies/records/${dramaId}`,
+    // `http://127.0.0.1:8090/api/collections/movies/records/${dramaId}`,
+    // `https://soydrama.pockethost.io/api/collections/movies/records/${dramaId}`,
+    `https://pocketbase-next-basic3.up.railway.app/api/collections/movies/records/${dramaId}`,
     {
       cache: "no-store",
     }
@@ -28,12 +29,13 @@ const DramaPage = async ({ params }: any) => {
         autoPlay
         loop
         controls
-        className="w-full h-[47vw] object-cover"
+        className="w-full lg:h-[47.2vw] object-cover md:h-[50vw]"
         // style={{ maxHeight: "calc(100vh - 100px)" }}
       >
         <source
           // src={`http://127.0.0.1:8090/api/files/6erqbp5koy8vlx9/${drama.id}/${drama?.stream}`}
-          src={`https://soydrama.pockethost.io/api/files/6erqbp5koy8vlx9/${drama.id}/${drama?.stream}`}
+          // src={`https://soydrama.pockethost.io/api/files/6erqbp5koy8vlx9/${drama.id}/${drama?.stream}`}
+          src={`https://pocketbase-next-basic3.up.railway.app/api/files/6erqbp5koy8vlx9/${drama.id}/${drama?.stream}`}
           type="video/mp4"
         />
       </video>
@@ -49,7 +51,8 @@ const DramaPage = async ({ params }: any) => {
       <img
         className="w-full h-full object-cover"
         // src={`http://127.0.0.1:8090/api/files/6erqbp5koy8vlx9/${drama.id}/${drama.backdrop}`}
-        src={`https://soydrama.pockethost.io/api/files/6erqbp5koy8vlx9/${drama.id}/${drama.backdrop}`}
+        // src={`https://soydrama.pockethost.io/api/files/6erqbp5koy8vlx9/${drama.id}/${drama.backdrop}`}
+        src={`https://pocketbase-next-basic3.up.railway.app/api/files/6erqbp5koy8vlx9/${drama.id}/${drama.backdrop}`}
         alt=""
       />
       <p>{drama.description}</p>
